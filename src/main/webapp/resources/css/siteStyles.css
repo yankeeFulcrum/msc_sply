@@ -1,0 +1,226 @@
+/*****************************************************
+*   Cascading Style Sheets (CSS) Style Definitions   *
+*   Created by Osman Balci for the Countries app.    *
+*****************************************************/
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url('../fonts/IBMPlexMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html, body {
+    background-color: white;
+    margin: 0 0 0 0;    /* top right bottom left */
+    width: 100%;        /* Set page width horizontally 100% */
+    height: 100%;       /* Set page height vertically 100% */
+}
+
+body, p {
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 14pt;
+    font-weight: 700;
+    color: black;
+}
+
+h1 {
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+/*
+========================================
+|   Table Replacement for Panel Grid   |
+========================================
+*/
+table {
+    border-width: thin;
+    border-color: white;
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.bottomSpace {
+    margin-bottom: 5px;
+}
+
+/*
+=======================================
+|   Site Template Component Styling   |
+=======================================
+*/
+/* Remove border and outline for the PrimeFaces menu */
+.ui-menu {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* Remove outline on focus */
+.ui-menuitem a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove submenu border */
+.ui-submenu {
+    border: none !important;
+}
+
+
+/*
+Style the div component whose unique id is "page"
+<div id="page"> in siteTemplate
+*/
+#page {
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 14pt;
+    font-weight: 700;
+    color: black;
+}
+/* 
+Style the div component whose unique id is "header"
+<div id="header"> in siteTemplate
+*/
+#header {
+    background-color: white;
+    width: 100%;
+    height: 84px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin-bottom: 16px;
+}
+/* 
+Style the div component whose unique id is "editableContent"
+<div id="editableContent"> in siteTemplate
+*/
+#editableContent {
+    /* height = 100% window height - (header height 84px + footer height 100px) */
+    height: calc(100% - 184px); 
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 100px;
+    margin-bottom: 16px;
+}
+/* 
+Style the div component whose unique id is "footer"
+<div id="footer"> in siteTemplate
+*/
+#footer {
+    height: 100px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*
+==========================
+|   Styling Hyperlinks   |
+==========================
+The <a> tag defines a hyperlink.
+Hyperlinks (or links) are styled differently depending on what state they are in:
+    a:link      - normal state (unvisited link)
+    a:visited   - visited state (link clicked on by user earlier)
+    a:hover     - mouse over state (link when the user hovers over it)
+    a:active    - active state (link currently clicked on by user)
+*/
+
+/* Set the font family for the standard HTML tag "a" for hyperlinks */
+a {
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 14pt;
+    font-weight: 700;
+}
+
+a:link {
+    text-decoration: none; /* Do not underline the link in normal state */
+}
+
+a:visited {
+    text-decoration: none; /* Do not underline the link in visited state */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline the link in hover state */
+}
+
+a:active {
+    text-decoration: underline; /* Underline the link in active state */
+}
+
+/*
+==============================
+|   Main Style Definitions   |
+==============================
+*/
+
+/* Used in headerTemplate */
+.headerTitle {
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 18pt;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+/* 
+Proportionately scale image to show on mobile devices and smaller browser windows.
+Scale the image downward, but do not enlarge it beyond its actual width size.
+*/
+.scalableImage {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+/* Used to color panel backgrounds */
+.ui-panel-content {
+    background-color: white !important;
+}
+
+/*
+======================================
+|   App Specific Style Definitions   |
+======================================
+*/
+
+/* Style the p:contentFlow image captions in FlagsCarousel.xhtml */
+.caption {
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 18pt;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+/*
+=========================================
+|   Skinning PrimeFaces UI Components   |
+=========================================
+*/
+
+/* PrimeFaces dataTable Row Paddings */
+.ui-datatable-data td {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+/* PrimeFaces tieredMenu skinning */
+.ui-menu .ui-menu-list .ui-menu-child {
+    white-space: nowrap;
+    width: auto !important;
+}

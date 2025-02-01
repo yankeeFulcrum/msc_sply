@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets">
+
+    <h:head>
+        <title>
+            <ui:insert name="title">MSC_SPLY</ui:insert>
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <h:outputStylesheet library="css" name="siteStyles.css" />
+
+        <h:outputScript library="js" name="all.js" />
+        <h:outputScript library="js" name="fontawesome.js" />
+
+        <link rel="shortcut icon" href="#{resource['images:favicon.ico']}" type="image/x-icon" />
+
+    </h:head>
+
+    <h:body>  
+        <div id="page">
+            <div id="header">
+                <ui:insert name="header" >
+                    <ui:include src="headerTemplate.xhtml" />
+                </ui:insert>
+            </div>
+
+            <div id="editableContent">
+                <ui:insert name="growlMessages" >
+                    <ui:include src="growlMessages.xhtml" />
+                </ui:insert>
+                <ui:insert name="editableContent" >
+                    <ui:include src="contentTemplate.xhtml" />
+                </ui:insert>
+            </div>
+
+            <div id="footer">
+                <ui:insert name="footer" >
+                    <ui:include src="footerTemplate.xhtml" />
+                </ui:insert>
+            </div>
+
+        </div>
+    </h:body>
+</html>
