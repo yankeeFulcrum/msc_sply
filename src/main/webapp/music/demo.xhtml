@@ -2,13 +2,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="jakarta.faces.facelets"
       xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
       xmlns:p="http://primefaces.org/ui">
-
 
 <ui:composition template="/template/siteTemplate.xhtml">
     <ui:define name="editableContent">
-        <div class="card" align="center">
-        </div>
+        <h:graphicImage value="/resources/images/yandhi.gif" style="display: block; margin: 0 auto; max-width: 20%; height: auto;" />
+        <br/><br/>
+        <h1 style="text-align: center;">LAST NAME [Ant Ref] 09.27.18</h1>
+        <br/>
+        <!-- Wrap everything inside <h:form> -->
+        <h:form enctype="multipart/form-data">
+            <div class="card" align="center">
+                <!-- MP3 Audio Player -->
+                <p:audio value="/resources/music/LAST%20NAME%20%5BAnt%20Ref%5D%2009.27.18.mp3"
+                         player="mp3"
+                         controls="true"
+                         onplay="console.log('MP3 Started Playing')"
+                         onpause="console.log('MP3 Stopped Playing')">
+                </p:audio>
+                <br/><br/>
+
+                <!-- Button to get Base64 encoded URL -->
+                <p:commandButton value="SHARE"
+                                 action="#{encodingManager.encodeCurrentUrl}"
+                                 update="encodedUrlPanel"
+                                 style="background: none; border: none; font-family: 'IBMPlexMono', monospace; font-size: 14pt; font-weight: 700; color: black;" />
+
+                <!-- Display the Base64 Encoded URL -->
+                <br/>
+
+                <p:outputPanel id="encodedUrlPanel" rendered="true">
+                    <h:inputText id="encodedUrl" value="#{encodingManager.encodedUrl}" disabled="true"
+                                 style="background: none; border: none; font-family: 'IBMPlexMono', monospace; font-size: 12pt; font-weight: 400; color: black;"/>
+                </p:outputPanel>
+            </div>
+        </h:form>
     </ui:define>
 </ui:composition>
+
+
 </html>

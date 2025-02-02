@@ -25,11 +25,20 @@ body, p {
 
 h1 {
     font-family: 'IBMPlexMono', monospace;
-    font-size: 12pt;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
+    font-size: 16pt;
+    font-weight: 600;
     color: black;
+}
+
+h {
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 14pt;
+    font-weight: 700;
+    color: black;
+}
+
+h1:hover {
+    text-decoration: underline; /* Underline the link in hover state */
 }
 
 /*
@@ -73,6 +82,46 @@ table {
 /* Remove submenu border */
 .ui-submenu {
     border: none !important;
+}
+
+.ui-button {
+    background-color: black; /* Tomato color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.command-link {
+    background: none;
+    border: none;
+    color: inherit; /* Uses the default text color */
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+}
+
+.ui-panelgroup {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Button hover state */
+.ui-button:hover {
+    background-color: black; /* Darker shade on hover */
+}
+
+/* Remove outline on focus */
+.ui-button:focus {
+    outline: none;
+}
+
+/* Optional: Add focus style to make it more accessible */
+.ui-button:focus-visible {
+    outline: 2px solid black; /* Focus outline with the same color as the button */
 }
 
 
